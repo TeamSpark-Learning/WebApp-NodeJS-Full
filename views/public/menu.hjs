@@ -6,7 +6,12 @@
   </head>
   <body>
     <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
-    <p>Description</p>
+    <h2>Our menu:</h2>
+    <div>
+    	<p>Title</p>
+    	<p>Description</p>
+    	<p>Price</p>
+    	<p>Image</p> 
+    </div>
   </body>
 </html>
