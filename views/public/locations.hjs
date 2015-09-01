@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>{{ title }}</h1>
-    <h2>Our location:</h2>
-    <div>
-    	<p>Location title</p>
-    	<p>Location phones</p>
-    	<p>Location work hours</p>
-    	<p>Location description</p> 
-    </div>
-  </body>
-</html>
+{{<layout}}
+	{{$content}}
+		<h1>{{ title }}</h1>
+		<h2>Our location:</h2>
+		<div>
+			<p>Location title</p>
+			<p>Location phones</p>
+			<p>Location work hours</p>
+			<p>Location description</p> 
+		</div>
+	{{/content}}
+{{/layout}}

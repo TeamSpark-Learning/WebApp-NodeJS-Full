@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>{{ title }}</h1>
-    <h2>Our menu:</h2>
-    <div>
-    	<p>Title</p>
-    	<p>Description</p>
-    	<p>Price</p>
-    	<p>Image</p> 
-    </div>
-  </body>
-</html>
+{{<layout}}
+	{{$content}}
+		<h1>{{ title }}</h1>
+		<h2>Our menu:</h2>
+		<div>
+			<p>Title</p>
+			<p>Description</p>
+			<p>Price</p>
+			<p>Image</p> 
+		</div>
+	{{/content}}
+{{/layout}}
