@@ -1,0 +1,7 @@
+<div>
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/locations">Locations</a></li>
+		<li><a href="/menu">Menu</a></li>
+	</ul>
+</div>
