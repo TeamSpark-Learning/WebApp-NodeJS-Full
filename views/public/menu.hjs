@@ -2,11 +2,17 @@
 	{{$content}}
 		<h1>{{ title }}</h1>
 		<h2>Our menu:</h2>
-		<div>
-			<p>Title</p>
-			<p>Description</p>
-			<p>Price</p>
-			<p>Image</p> 
-		</div>
+		{{#dishes}}
+			<div>
+				<p>{{ title }}</p>
+				{{#description}}
+					<p>{{ description }}</p>
+				{{/description}}
+				<p>{{ price }} USD</p>
+				{{#imageUrl}}
+					<div><img src="{{ imageUrl }}" /></div>
+				{{/imageUrl}}
+			</div>
+		{{/dishes}}
 	{{/content}}
 {{/layout}}
