@@ -4,7 +4,7 @@
 		<h2>Our menu:</h2>
 		{{#dishes}}
 			<div>
-				<p>{{ title }}</p>
+				<h3>{{ title }}</h3>
 				{{#description}}
 					<p>{{ description }}</p>
 				{{/description}}
