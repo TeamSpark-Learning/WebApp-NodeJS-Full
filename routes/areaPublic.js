@@ -23,6 +23,13 @@ router.get('/locations', function(req, res, next) {
 	var model = getModelBase();
 
 	model.title = 'locations';
+	model.locations = [
+		{title: 'downtown', phones: '555-00-11', workHours: '0-24', description: ''},
+		{title: 'north', phones: '', workHours: '12-22', description: ''},
+		{title: 'south', phones: '', workHours: '', description: ''},
+		{title: 'west', phones: '', workHours: '8-16', description: ''},
+		{title: 'east', phones: '', workHours: '16-24', description: ''}
+	];
 
 	res.render('public/locations', model);
 });

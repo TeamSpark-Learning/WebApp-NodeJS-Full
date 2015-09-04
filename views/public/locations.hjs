@@ -1,12 +1,29 @@
 {{<layout}}
 	{{$content}}
 		<h1>{{ title }}</h1>
-		<h2>Our location:</h2>
+		<h2>Our locations:</h2>
+		{{#locations}}
 		<div>
-			<p>Location title</p>
-			<p>Location phones</p>
-			<p>Location work hours</p>
-			<p>Location description</p> 
+			<h3>{{ title }}</h3>
+			{{#phones}}
+				<p>
+					Location phones: 
+					{{ phones }}
+				</p>
+			{{/phones}}
+			<p>
+				Work Hours: 
+				{{#workHours}}
+					{{ workHours }}
+				{{/workHours}}
+				{{^workHours}}
+					unknown
+				{{/workHours}}
+			</p>
+			{{#description}}
+				<p>{{ description }}</p>
+			{{/description}}
 		</div>
+		{{/locations}}
 	{{/content}}
 {{/layout}}
