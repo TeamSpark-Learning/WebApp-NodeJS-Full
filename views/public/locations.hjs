@@ -3,27 +3,27 @@
 		<h1>{{ title }}</h1>
 		<h2>Our locations:</h2>
 		{{#locations}}
-		<div>
-			<h3>{{ title }}</h3>
-			{{#phones}}
+			<div>
+				<h3>{{ title }}</h3>
+				{{#phones}}
+					<p>
+						Location phones: 
+						{{ phones }}
+					</p>
+				{{/phones}}
 				<p>
-					Location phones: 
-					{{ phones }}
+					Work Hours: 
+					{{#workHours}}
+						{{ workHours }}
+					{{/workHours}}
+					{{^workHours}}
+						unknown
+					{{/workHours}}
 				</p>
-			{{/phones}}
-			<p>
-				Work Hours: 
-				{{#workHours}}
-					{{ workHours }}
-				{{/workHours}}
-				{{^workHours}}
-					unknown
-				{{/workHours}}
-			</p>
-			{{#description}}
-				<p>{{ description }}</p>
-			{{/description}}
-		</div>
+				{{#description}}
+					<p>{{ description }}</p>
+				{{/description}}
+			</div>
 		{{/locations}}
 	{{/content}}
 {{/layout}}
