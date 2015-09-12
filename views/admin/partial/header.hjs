@@ -1,0 +1,8 @@
+<div>
+	<h1>Admin area</h1>
+	<ul>
+		<li><a href="/admin">Home</a></li>
+		<li><a href="/admin/locations">Locations</a></li>
+		<li><a href="/admin/menu">Menu</a></li>
+	</ul>
+</div>
