@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var getModelBase = function() {
+function getPublicModelBase() {
 	return {
 		partials: {
 			header: 'public/partial/header',
@@ -12,7 +12,7 @@ var getModelBase = function() {
 };
 
 router.get('/', function(req, res, next) {
-	var model = getModelBase();
+	var model = getPublicModelBase();
 
 	model.title = 'public area';
 
@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/locations', function(req, res, next) {
-	var model = getModelBase();
+	var model = getPublicModelBase();
 
 	model.title = 'locations';
 	model.locations = [
@@ -35,7 +35,7 @@ router.get('/locations', function(req, res, next) {
 });
 
 router.get('/menu', function(req, res, next) {
-	var model = getModelBase();
+	var model = getPublicModelBase();
 
 	model.title = 'menu';
 	model.dishes = [
