@@ -1,0 +1,5 @@
+{{<layout}}
+	{{$content}}
+		<h2>Manage waiters</h2>
+	{{/content}}
+{{/layout}}

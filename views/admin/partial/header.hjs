@@ -4,5 +4,12 @@
 		<li><a href="/admin">Home</a></li>
 		<li><a href="/admin/locations">Locations</a></li>
 		<li><a href="/admin/menu">Menu</a></li>
+		<li>
+			<ul>
+				<li><a href="/admin/users-admin">Manage administrators</a></li>
+				<li><a href="/admin/users-waiter">Manage waiters</a></li>
+			</ul>
+		</li>
+		<li><a href="/admin/logout">Logout</a></li>
 	</ul>
 </div>

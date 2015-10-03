@@ -37,6 +37,22 @@ router.get('/menu', function(req, res, next) {
 	res.render('admin/menu', model);
 });
 
+router.get('/users-admin', function(req, res, next) {
+	var model = getAdminModelBase();
 
+	res.render('admin/users-admin', model);
+});
+
+router.get('/users-waiter', function(req, res, next) {
+	var model = getAdminModelBase();
+
+	res.render('admin/users-waiter', model);
+});
+
+router.get('/logout', function(req, res, next) {
+	var model = getAdminModelBase();
+
+	res.render('admin/login', model);
+});
 
 module.exports = router;
