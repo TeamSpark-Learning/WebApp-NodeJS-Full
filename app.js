@@ -5,8 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
 var areaPublic = require('./routes/areaPublic');
 var areaAdmin = require('./routes/areaAdmin');
+var areaWaiter = require('./routes/areaWaiter');
+
 
 var app = express();
 
@@ -25,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', areaPublic);
 app.use('/admin', areaAdmin);
+app.use('/waiter', areaWaiter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -56,6 +60,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
 
 module.exports = app;
