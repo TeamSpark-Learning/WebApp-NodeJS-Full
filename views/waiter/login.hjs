@@ -1,0 +1,15 @@
+{{<layout}}
+	{{$content}}
+		<div>
+			<form method="post">
+				<div>
+					<label>PIN: </label>
+					<input type="text" id="tbPin" name="tbPin" />
+				</div>
+				<div>
+					<button type="submit">Login</button>
+				</div>
+			</form>
+		</div>
+	{{/content}}
+{{/layout}}
