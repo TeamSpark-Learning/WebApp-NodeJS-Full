@@ -39,7 +39,7 @@ router.get('/menu', function(req, res, next) {
 
 	model.title = 'menu';
 	model.dishes = [
-		{title: 'tea', description: 'tea in a cup', price: 0.99, imageUrl: '/images/1437442997_handdrawn-graduation-cap.png'}
+		{title: 'tea', description: 'tea in a cup', price: 0.99, imageUrl: '/cdn/img/1437442997_handdrawn-graduation-cap.png'}
 	];
 
 	res.render('public/menu', model);

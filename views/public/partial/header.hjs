@@ -1,7 +1,7 @@
 <div>
-	<ul>
-		<li><a href="/">Home</a></li>
-		<li><a href="/locations">Locations</a></li>
-		<li><a href="/menu">Menu</a></li>
+	<ul class="nav nav-tabs nav-justified">
+		<li role="presentation"><a href="/">Home</a></li>
+		<li role="presentation"><a href="/locations">Locations</a></li>
+		<li role="presentation"><a href="/menu">Menu</a></li>
 	</ul>
 </div>

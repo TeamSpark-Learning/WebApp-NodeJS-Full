@@ -37,6 +37,7 @@ app.use(lessMiddleware(path.join(__dirname, 'less'), {
 
 // cdn
 app.use('/cdn', express.static(path.join(__dirname, 'cdn')));
+app.use('/cdn/bootstrap', express.static(path.join(__dirname, 'node_modules', 'bootstrap', 'dist')));
 
 app.use('/', areaPublic);
 app.use('/admin', areaAdmin);
