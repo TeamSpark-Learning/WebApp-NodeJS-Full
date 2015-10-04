@@ -30,7 +30,6 @@ app.use(lessMiddleware(path.join(__dirname, 'less'), {
   preprocess: {
     path: function(pathname, req) {
       var pathLess = pathname.replace(path.join('cdn', 'css'), '').replace('//', '/');
-      
       return pathLess;
     }
   }

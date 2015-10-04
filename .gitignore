@@ -29,3 +29,6 @@ node_modules
 .project
 .settings
 .vscode
+
+# ignore css files created from less files
+cdn/css/style.css
