@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<link rel="icon" href="/cdn/favicon.ico" />
 	</head>
 	<body>
 		{{>header}}
