@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel='stylesheet' href='/stylesheets/style.css' />
 		<link rel="icon" href="/cdn/favicon.ico" />
+		<link rel='stylesheet' href='/cdn/css/style.css' />
 	</head>
 	<body>
 		{{>header}}

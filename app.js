@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var lessMiddleware = require('less-middleware');
 
 var areaPublic = require('./routes/areaPublic');
 var areaAdmin = require('./routes/areaAdmin');
@@ -17,13 +17,25 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hjs');
 
-app.use(favicon(__dirname + '/cdn/favicon.ico'));
+app.use(favicon(path.join(__dirname, 'cdn', 'favicon.ico')));
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(require('less-middleware')(path.join(__dirname, 'public')));
+
+// less
+app.use(lessMiddleware(path.join(__dirname, 'less'), {
+  dest: __dirname,
+  preprocess: {
+    path: function(pathname, req) {
+      var pathLess = pathname.replace(path.join('cdn', 'css'), '').replace('//', '/');
+      
+      return pathLess;
+    }
+  }
+}));
+
 // cdn
 app.use('/cdn', express.static(path.join(__dirname, 'cdn')));
 
